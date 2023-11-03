@@ -36,9 +36,28 @@ body {
   border: 2px grey solid;
   border-radius: 4px;
   width: 400px;
-  text-align: center;
   margin-top: 20px;
 }
+
+.patterns {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.patterns br {
+  display: block;
+}
+
+.patterns label {
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.patterns input {
+  margin-right: 3px;
+}
+
 
 .settings h3 {
   background-color: var(--ns-yellow);
@@ -50,4 +69,9 @@ body {
   font-size: 20px;
   padding: 0px 5px;
   font-weight: 600;
+}
+
+.settings h4 {
+  font-size: 18px;
+  font-weight: bold;
 }

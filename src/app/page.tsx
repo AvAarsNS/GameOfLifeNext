@@ -9,13 +9,18 @@ export default function Home() {
       </div>
       <div>
         <div></div>
-        <div className='settings'>
+        <div className='settings flex flex-col items-center justify-between'>
           <h3>Settings</h3>
           <h4>Patterns</h4>
-          <input type='checkbox' /> Random
-          <br /><input type='checkbox' /> 1
-          <br /><input type='checkbox' /> 2
-          <br /><input type='checkbox' /> 3
+          <div className="patterns">
+            <label><input type="checkbox" /> Random</label>
+            <br />
+            <label><input type="checkbox" /> 1</label>
+            <br />
+            <label><input type="checkbox" /> 2</label>
+            <br />
+            <label><input type="checkbox" /> 3</label>
+          </div>
         </div>
       </div>
     </main>
