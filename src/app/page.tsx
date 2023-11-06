@@ -14,11 +14,8 @@ export default function Home() {
           <h4>Patterns</h4>
           <div className="patterns">
             <label><input type="checkbox" /> Random</label>
-            <br />
             <label><input type="checkbox" /> 1</label>
-            <br />
             <label><input type="checkbox" /> 2</label>
-            <br />
             <label><input type="checkbox" /> 3</label>
           </div>
         </div>

@@ -37,6 +37,10 @@ body {
   border-radius: 4px;
   width: 400px;
   margin-top: 20px;
+  position: absolute;
+  top: 50%; /* This will center the div vertically */
+  transform: translateY(-50%); /* This adjusts the positioning */
+  right: 20px;
 }
 
 .patterns {
@@ -44,20 +48,19 @@ body {
   margin-bottom: 50px;
 }
 
-.patterns br {
-  display: block;
-}
-
 .patterns label {
-  font-size: 10px;
+  display: block;
+  font-size: 16px;
   display: flex;
   flex-direction: row;
+  padding-bottom: 10px;
+  padding-left: 5px;
 }
 
 .patterns input {
-  margin-right: 3px;
+  margin-right: 10px;
+  transform: scale(1.5);
 }
-
 
 .settings h3 {
   background-color: var(--ns-yellow);
@@ -72,6 +75,6 @@ body {
 }
 
 .settings h4 {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 29px;
+  font-weight: 650;
 }
