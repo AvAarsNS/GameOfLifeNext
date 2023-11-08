@@ -1,11 +1,11 @@
-import Image from 'next/image'
 import GameGrid from './components/gamegrid'
+import { gliderGrid } from '../../test/doubles/grid.double';
 
 const createInitialGrid = (size: number) =>
-  Array.from({ length: size }, () => Array.from({ length: size }, () => 0));
+  Array.from({ length: size }, () => Array.from({ length: size }, () => Math.round(Math.random())));
 
 export default function Home() {
-  const grid = createInitialGrid(20);
+  const grid = gliderGrid;
 
   return (
     <main className="flex flex-col items-center justify-between">
@@ -14,11 +14,9 @@ export default function Home() {
         <h2>FVT version</h2>
       </div>
       <div>
-        <div>
-          <div className="flex justify-center items-center h-screen bg-gray-50">
+          <div className="flex justify-center items-center h-screen">
             <GameGrid grid={grid} />
-    </div>
-        </div>
+          </div>
         <div className='settings flex flex-col items-center justify-between'>
           <h3>Settings</h3>
           <h4>Patterns</h4>
