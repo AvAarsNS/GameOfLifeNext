@@ -10,6 +10,7 @@
 # Maybe do these tests in Cypress? Spike?
 https://nextjs.org/docs/pages/building-your-application/optimizing/testing
 I mean this test: - Test that the DOM contains the correct universe
+- Optimize component test for game grid. Currently takes > 1 minute 🙌
 
 # Test the gamegrid component which is actually a unit test that tests a nextJS component ......
 - Test that the DOM contains the correct universe
