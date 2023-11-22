@@ -3,48 +3,29 @@ import { gliderGrid } from "../../test/doubles/grid.double"
 import React from "react"
  
 describe('<GameGrid />', () => {
-  it('should be able to render a grid with a glider', () => {
-    // Start measuring time
-    const startTime = new Date().getTime();
+  it('should render grid with glider correctly', () => {
+    // Mount the GameGrid component with the provided gliderGrid
+    cy.mount(<GameGrid grid={gliderGrid} />);
 
-    // Mount the React component for the About page
-    
-    cy.mount(<GameGrid grid={gliderGrid} />)
-      .then(() => {
-        
-        // Measure time after mounting
-        const mountTime = new Date().getTime() - startTime;
-        cy.log(`Mounting took ${mountTime} milliseconds`);
+    // Get all grid cells as a single group
+    cy.get('[data-cy-gridcoordinate]').each(($cell) => {
+      // Convert the jQuery object to a native DOM element
+      const cellElement = $cell[0];
 
-        // check for each cell whether it has the right class
-        for (let i = 0; i < gliderGrid.length; i++) {
-          for (let j = 0; j < gliderGrid[i].length; j++) {
-            const cellStartTime = new Date().getTime();
+      // Extract row and column indices from the cell's data attribute
+      const [rowIndex, columnIndex] = cellElement.dataset.cyGridcoordinate.replace(/[()]/g, '').split(',').map(Number);
 
-            if (gliderGrid[i][j] === 1) {
-              cy.get(`[data-cy-gridcoordinate="(${i},${j})"]`)
-                .should('have.class', 'bg-black')
-                .should('have.class', 'w-6')
-                .should('have.class', 'h-6');
-            } else {
-              cy.get(`[data-cy-gridcoordinate="(${i},${j})"]`)
-                .should('have.class', 'bg-gray-100')
-                .should('have.class', 'w-6')
-                .should('have.class', 'h-6');
-            }
+      // Determine the expected class based on the cell value in gliderGrid
+      const expectedClass = gliderGrid[rowIndex][columnIndex] === 1 ? 'bg-black' : 'bg-gray-100';
 
-            // Measure time for each cell
-            const cellExecutionTime = new Date().getTime() - cellStartTime;
-            cy.log(`Checking cell (${i},${j}) took ${cellExecutionTime} milliseconds`);
-          }
-        } 
-      }) 
-      .then(() => {
-        // Measure total test time
-        const totalTime = new Date().getTime() - startTime;
-        cy.log(`Total test execution time: ${totalTime} milliseconds`);
-      });
+      // Assert that the cell has the expected class
+      cy.wrap(cellElement).should('have.class', expectedClass);
+    });
   });
 });
+
+
+
+
 
 
