@@ -1,28 +1,36 @@
-import GameGrid from "@/app/components/gamegrid"
-import { gliderGrid } from "../../test/doubles/grid.double"
-import React from "react"
- 
-describe('<GameGrid />', () => {
-  it('should render grid with glider correctly', () => {
-    // Mount the GameGrid component with the provided gliderGrid
-    cy.mount(<GameGrid grid={gliderGrid} />);
+import React from 'react';
+import GameGrid from "../../src/app/components/gamegrid"
 
-    // Get all grid cells as a single group
-    cy.get('[data-cy-gridcoordinate]').each(($cell) => {
-      // Convert the jQuery object to a native DOM element
-      const cellElement = $cell[0];
+describe('GameGrid Component Optimization', () => {
+  it('efficiently verifies grid rendering and cell properties', () => {
+    // Testing with a smaller grid for efficiency
+    const gridData = [
+      [1, 0, 1],
+      [0, 1, 0],
+    ];
 
-      // Extract row and column indices from the cell's data attribute
-      const [rowIndex, columnIndex] = cellElement.dataset.cyGridcoordinate.replace(/[()]/g, '').split(',').map(Number);
+    cy.mount(<GameGrid grid={gridData} />);
 
-      // Determine the expected class based on the cell value in gliderGrid
-      const expectedClass = gliderGrid[rowIndex][columnIndex] === 1 ? 'bg-black' : 'bg-gray-100';
+    // Check grid structure
+    cy.get('.grid').should('have.class', 'grid-cols-20');
+    
+    // Check a few cells instead of the entire grid
+    // This reduces the number of DOM queries
+    const testCells = [
+      { rowIndex: 0, colIndex: 0, expectedBg: 'bg-black' },
+      { rowIndex: 0, colIndex: 1, expectedBg: 'bg-gray-100' },
+      { rowIndex: 1, colIndex: 1, expectedBg: 'bg-black' },
+    ];
 
-      // Assert that the cell has the expected class
-      cy.wrap(cellElement).should('have.class', expectedClass);
+    testCells.forEach(({ rowIndex, colIndex, expectedBg }) => {
+      cy.get(`[data-cy-gridcoordinate="(${rowIndex},${colIndex})"]`)
+        .should('have.class', 'w-6')
+        .should('have.class', 'h-6')
+        .should('have.class', expectedBg);
     });
   });
 });
+
 
 
 

@@ -26,5 +26,17 @@ export const gameOfLifeAPIJSON = `{
   "universe": ${JSON.stringify(gliderGrid)},
 }`;
 
+export const fourByFourGrid = [
+  [0, 1, 0, 0],
+  [1, 0, 1, 0],
+  [0, 1, 0, 1],
+  [0, 0, 1, 0],
+]; 
+
+export const fourByFourGridJSON = `{
+  "tickNumber": 0,
+  "universe": ${JSON.stringify(fourByFourGrid)},
+}`;
+
 // TODO: Mock response of an HTTP library
 // export const gameOfLifeAPIResponse = 
