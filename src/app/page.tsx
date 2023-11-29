@@ -1,5 +1,6 @@
 import GameGrid from './components/gamegrid'
 import { gliderGrid } from '../../test/doubles/grid.double';
+import GameConfig from './components/gameconfig';
 
 const createInitialGrid = (size: number) =>
   Array.from({ length: size }, () => Array.from({ length: size }, () => Math.round(Math.random())));
@@ -27,6 +28,7 @@ export default function Home() {
             <label><input type="checkbox" /> 3</label>
           </div>
         </div>
+        <GameConfig />
       </div>
     </main>
   )

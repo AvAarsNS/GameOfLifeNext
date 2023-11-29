@@ -1,6 +1,13 @@
+## miro link
+https://miro.com/app/board/uXjVNZMphpc=/
+ww GameofLife
+
 # UX ontwerp Reny namaken
-- Patroonlijstje namaken ✅
-- Start button d'rin joekelen 
+✅- Patroonlijstje namaken 
+✅- Start button component maken 
+✅ Start button in html joekelen -> ✅ mag lelijk
+🙌 - patroon configuratie in GameConfig
+  
 
 # API connection with backend
 - Mock call to backend
@@ -14,7 +21,7 @@ I mean this test: - Test that the DOM contains the correct universe
 ✅    -- Readability can be improved further. For the test case and the code of the component.
 
 # Test the gamegrid component which is actually a unit test that tests a nextJS component ......
-🙌 - Create functionality that transforms the JSON universe to the grid
+-- Create functionality that transforms the JSON universe to the grid
 -- JSON from response --> GameGrid
 
 # Investigate SuperTest
