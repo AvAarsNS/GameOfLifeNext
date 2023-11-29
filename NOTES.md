@@ -12,9 +12,10 @@ https://nerdcave.com/tailwind-cheat-sheet
 ✅ - patroon configuratie in GameConfig
 
 # Start button werkend maken
-Component test
-- Klik op start
-- Het gekozen pattern moet meegegeven worden aan de onClick-functie
+✅ Component test
+  -- Klik op start
+  -- Het gekozen pattern moet meegegeven worden aan de onClick-functie
+  -- Valideren dat er maar 1 pattern mee wordt gegeven
 
 E2E test
 - Open pagina
