@@ -1,12 +1,26 @@
-## miro link
+# miro link
 https://miro.com/app/board/uXjVNZMphpc=/
 ww GameofLife
+
+# Tailwind cheat sheet
+https://nerdcave.com/tailwind-cheat-sheet
 
 # UX ontwerp Reny namaken
 ✅- Patroonlijstje namaken 
 ✅- Start button component maken 
 ✅ Start button in html joekelen -> ✅ mag lelijk
-🙌 - patroon configuratie in GameConfig
+✅ - patroon configuratie in GameConfig
+
+# Start button werkend maken
+Component test
+- Klik op start
+- Het gekozen pattern moet meegegeven worden aan de onClick-functie
+
+E2E test
+- Open pagina
+- Kies een patroon
+- Klik op start
+- Bingo
   
 
 # API connection with backend

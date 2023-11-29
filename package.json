@@ -9,7 +9,8 @@
     "test": "jest --coverage --reporters=default --passWithNoTests --verbose",
     "lint": "next lint",
     "cypress:open": "cypress open",
-    "component": "cypress run --component"
+    "component": "cypress run --component",
+    "component-watch": "cypress open --component"
   },
   "jest": {
     "preset": "ts-jest",

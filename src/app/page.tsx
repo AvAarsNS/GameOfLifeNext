@@ -3,10 +3,10 @@ import { gliderGrid } from '../../test/doubles/grid.double';
 import GameConfig from './components/gameconfig';
 
 const createInitialGrid = (size: number) =>
-  Array.from({ length: size }, () => Array.from({ length: size }, () => Math.round(Math.random())));
+  Array.from({ length: size }, () => Array.from({ length: size }, () => 0));
 
 export default function Home() {
-  const grid = gliderGrid;
+  const grid = createInitialGrid(20);
 
   return (
     <main className="flex flex-col items-center justify-between">
@@ -20,15 +20,8 @@ export default function Home() {
           </div>
         <div className='settings flex flex-col items-center justify-between'>
           <h3>Settings</h3>
-          <h4>Patterns</h4>
-          <div className="patterns">
-            <label><input type="checkbox" /> Random</label>
-            <label><input type="checkbox" /> 1</label>
-            <label><input type="checkbox" /> 2</label>
-            <label><input type="checkbox" /> 3</label>
-          </div>
+          <GameConfig />
         </div>
-        <GameConfig />
       </div>
     </main>
   )
