@@ -17,7 +17,7 @@ https://nerdcave.com/tailwind-cheat-sheet
   -- Het gekozen pattern moet meegegeven worden aan de onClick-functie
   -- Valideren dat er maar 1 pattern mee wordt gegeven
 
-E2E test
+🙌 E2E test
 - Open pagina
 - Kies een patroon
 - Klik op start
@@ -34,10 +34,6 @@ https://nextjs.org/docs/pages/building-your-application/optimizing/testing
 I mean this test: - Test that the DOM contains the correct universe
 ✅ - Optimize component test for game grid. Currently takes > 1 minute
 ✅    -- Readability can be improved further. For the test case and the code of the component.
-
-# Test the gamegrid component which is actually a unit test that tests a nextJS component ......
--- Create functionality that transforms the JSON universe to the grid
--- JSON from response --> GameGrid
 
 # Investigate SuperTest
 https://www.npmjs.com/package/supertest

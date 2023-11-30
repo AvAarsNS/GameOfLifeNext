@@ -1,3 +1,4 @@
+'use client';
 import GameGrid from './components/gamegrid'
 import { gliderGrid } from '../../test/doubles/grid.double';
 import GameConfig from './components/gameconfig';
