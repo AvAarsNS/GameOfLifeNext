@@ -18,10 +18,11 @@ https://nerdcave.com/tailwind-cheat-sheet
   -- Valideren dat er maar 1 pattern mee wordt gegeven
 
 🙌 E2E test
-- Open pagina
-- Kies een patroon
-- Klik op start
-- Bingo
+- ✅Open pagina
+- ✅Kies een patroon
+- ✅Klik op start
+- 🙌Mock de API Call met een glider response
+- 🙌Voeg assertions toe voor glider
   
 
 # API connection with backend

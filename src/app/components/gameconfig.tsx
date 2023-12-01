@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 const GameConfig = ({onGameStart}: {onGameStart: Function}) => {
     const [selectedPattern, setSelectedPattern] = useState('');
 
@@ -10,6 +11,7 @@ const GameConfig = ({onGameStart}: {onGameStart: Function}) => {
     const handleStartClick = () => {
         onGameStart(selectedPattern);
     };
+
 
     return (
         <div className="flex flex-col items-center">

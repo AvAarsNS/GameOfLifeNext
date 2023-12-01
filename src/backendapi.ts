@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+export function onGameStart(selectedPattern: string) {
+    postStartNewGame()
+}
+
 export function postStartNewGame() {
     return axios.post('http://localhost:3000/newgame', {
         "width": 20,

@@ -1,7 +1,7 @@
 'use client';
 import GameGrid from './components/gamegrid'
-import { gliderGrid } from '../../test/doubles/grid.double';
 import GameConfig from './components/gameconfig';
+import { onGameStart } from '../backendapi';
 
 const createInitialGrid = (size: number) =>
   Array.from({ length: size }, () => Array.from({ length: size }, () => 0));
@@ -21,7 +21,7 @@ export default function Home() {
           </div>
         <div className='settings flex flex-col items-center justify-between'>
           <h3>Settings</h3>
-          <GameConfig />
+          <GameConfig onGameStart={onGameStart} />
         </div>
       </div>
     </main>
