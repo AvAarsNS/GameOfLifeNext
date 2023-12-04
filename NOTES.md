@@ -21,8 +21,10 @@ https://nerdcave.com/tailwind-cheat-sheet
 - ✅Open pagina
 - ✅Kies een patroon
 - ✅Klik op start
-- 🙌Mock de API Call met een glider response
+- ✅Mock de API Call met een glider response
 - Voeg assertions toe voor glider
+
+Functionaliteit toevoegen waarmee na het klikken op de start knop het spel echt start en het gevraagde universum zichtbaar wordt
 - Vervang de onGameStart functie door de PostNewGame functie
   
 
