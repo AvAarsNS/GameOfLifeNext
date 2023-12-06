@@ -12,7 +12,7 @@ describe('Time to play the game of life', () => {
     });
 
     cy.get('[data-cy-start-button]').click();
-
+    // TODO: implement complete assertion of glider
     cy.get(`[data-cy-gridcoordinate="(0,0)"]`).should('have.class', 'alive');
   });
 });

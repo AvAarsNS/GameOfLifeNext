@@ -42,4 +42,10 @@ I mean this test: - Test that the DOM contains the correct universe
 # Investigate SuperTest
 https://www.npmjs.com/package/supertest
 
-# Learn to navigate by keyboard to prevent serious injury to our wrists and fingers
+# SPIKE: BDD + Cypress for e2e testing
+https://kailash-pathak.medium.com/cypress-13-integration-with-bdd-cucumber-pom-a367f534b363
+
+# Tech debt
+## Styling improvements
+- Prevent the universe from overlapping with the gameconfig component
+  -- Change the settings styling to use Tailwind instead of CSS
