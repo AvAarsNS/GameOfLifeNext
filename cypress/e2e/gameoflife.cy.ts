@@ -5,14 +5,17 @@ describe('Time to play the game of life', () => {
     cy.visit('http://localhost:3000')
     cy.get('[data-cy-radiobutton-pattern=Glider]').click();
 
-    // Intercept the network request when the start button is clicked. Some kind of mocking :)
-    cy.intercept('POST', '/newgame*', {
-      statusCode: 200,
-      body: gameOfLifeAPIJSON
-    });
-
     cy.get('[data-cy-start-button]').click();
-    // TODO: implement complete assertion of glider
-    cy.get(`[data-cy-gridcoordinate="(0,0)"]`).should('have.class', 'alive');
+    // Only check the area where the glider is. Maybe we can improve this..
+    cy.get(`[data-cy-gridcoordinate="(0,0)"]`).should('have.class', 'dead');
+    cy.get(`[data-cy-gridcoordinate="(0,1)"]`).should('have.class', 'alive');
+    cy.get(`[data-cy-gridcoordinate="(0,2)"]`).should('have.class', 'dead');
+    cy.get(`[data-cy-gridcoordinate="(1,0)"]`).should('have.class', 'dead');
+    cy.get(`[data-cy-gridcoordinate="(1,1)"]`).should('have.class', 'dead');
+    cy.get(`[data-cy-gridcoordinate="(1,2)"]`).should('have.class', 'alive');
+    cy.get(`[data-cy-gridcoordinate="(2,0)"]`).should('have.class', 'alive');
+    cy.get(`[data-cy-gridcoordinate="(2,1)"]`).should('have.class', 'alive');
+    cy.get(`[data-cy-gridcoordinate="(2,2)"]`).should('have.class', 'alive');
+
   });
 });

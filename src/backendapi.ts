@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 export function onGameStart(selectedPattern: string) {
-    postStartNewGame()
+    return postStartNewGame(selectedPattern);
 }
 
-export function postStartNewGame() {
-    return axios.post('http://localhost:3000/newgame', {
+export function postStartNewGame(pattern: string) {
+    return axios.post('http://localhost:8088/start', {
         "width": 20,
         "height": 20,
-        "pattern": "glider"
+        "pattern": pattern
     })
     .then(response => response.data)
     .catch(error => {

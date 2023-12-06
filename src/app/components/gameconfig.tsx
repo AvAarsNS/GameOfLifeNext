@@ -8,8 +8,17 @@ const GameConfig = ({onGameStart}: {onGameStart: Function}) => {
         setSelectedPattern(event.target.value);
     };
 
-    const handleStartClick = () => {
-        onGameStart(selectedPattern);
+    const handleStartClick = async () => {
+        try {
+            const response = await onGameStart(selectedPattern);
+            const responseJSON = await response.json();
+            const newGrid = responseJSON.universe;
+
+            // Assuming the newGrid is the data you need to update in the parent component
+            onGameStart(newGrid);
+        } catch (error) {
+            console.error("Error starting the game:", error);
+        }
     };
 
 

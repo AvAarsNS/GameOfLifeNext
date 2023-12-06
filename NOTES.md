@@ -17,15 +17,19 @@ https://nerdcave.com/tailwind-cheat-sheet
   -- Het gekozen pattern moet meegegeven worden aan de onClick-functie
   -- Valideren dat er maar 1 pattern mee wordt gegeven
 
-🙌 E2E test
+✅ E2E test
 - ✅Open pagina
 - ✅Kies een patroon
 - ✅Klik op start
 - ✅Mock de API Call met een glider response
-- Voeg assertions toe voor glider
+- ✅Voeg assertions toe voor glider
 
 Functionaliteit toevoegen waarmee na het klikken op de start knop het spel echt start en het gevraagde universum zichtbaar wordt
-- Vervang de onGameStart functie door de PostNewGame functie
+🙌 - onGameStart function:
+🙌 -- Ensure that the response will be passed to the GameGrid component, so the user can see it
+--- Only a small step left to get the game working. The game grid receives something, but it cannot render it. Debug this issue to find out what this component receives and why it cannot render it.
+
+✅ SPIKE: how can we get the response universe in our grid?
   
 
 # API connection with backend
