@@ -1,8 +1,8 @@
-import React from 'react';
+
 import { render, waitFor } from '@testing-library/react';
 import { mockedAxios as axios } from '../mocks/axios';
-import { postStartNewGame } from '../../src/backendapi';
-import { fourByFourGridJSON, gameOfLifeAPIJSON } from '../doubles/grid.double';
+import { postStartNewGame, onGameStart } from '../../src/backendapi';
+import { fourByFourGridJSON, gameOfLifeAPIJSON, gliderGrid } from '../doubles/grid.double';
 import GameContainer from '../../src/app/components/gamecontainer'; // Adjust this import according to your file structure
 describe('This is the test suite for functionality that will enable the interaction with the Game of Life back-end', () => {
     // Existing test case
@@ -45,5 +45,13 @@ describe('This is the test suite for functionality that will enable the interact
                 });
             });
         });
+    });
+});
+
+describe('We then have a component that does the call to the backend, and transforms the response to a universe', () => {
+    it('When we ask for a new game with glider pattern, this will be returned', async () => {
+        axios.post.mockResolvedValue({ data: gameOfLifeAPIJSON });
+        const universe = await onGameStart("glider")
+        expect(universe).toEqual(gliderGrid);
     });
 });

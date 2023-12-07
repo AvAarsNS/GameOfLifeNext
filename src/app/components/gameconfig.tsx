@@ -13,6 +13,7 @@ const GameConfig = ({onGameStart}: {onGameStart: Function}) => {
             const response = await onGameStart(selectedPattern);
             const responseJSON = await response.json();
             const newGrid = responseJSON.universe;
+            cy.log("New grid:", newGrid);
 
             // Assuming the newGrid is the data you need to update in the parent component
             onGameStart(newGrid);

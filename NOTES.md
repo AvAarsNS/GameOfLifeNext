@@ -27,6 +27,7 @@ https://nerdcave.com/tailwind-cheat-sheet
 Functionaliteit toevoegen waarmee na het klikken op de start knop het spel echt start en het gevraagde universum zichtbaar wordt
 🙌 - onGameStart function:
 🙌 -- Ensure that the response will be passed to the GameGrid component, so the user can see it
+🙌 --- Component test to ensure onGameStart function returns a proper universe ([][])
 --- Only a small step left to get the game working. The game grid receives something, but it cannot render it. Debug this issue to find out what this component receives and why it cannot render it.
 
 ✅ SPIKE: how can we get the response universe in our grid?
