@@ -10,7 +10,7 @@ export default function Home() {
   const [grid, setGrid] = useState(createInitialGrid(20));
 
   // Callback function to update the grid
-  const updateGrid = (newGrid: React.SetStateAction<number[][]>) => {
+  const updateGrid = (newGrid: number[][]) => {
     setGrid(newGrid);
   };
 

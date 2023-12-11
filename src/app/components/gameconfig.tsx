@@ -1,3 +1,4 @@
+import { postStartNewGame } from "@/backendapi";
 import React, { useState } from "react";
 
 
@@ -10,10 +11,8 @@ const GameConfig = ({onGameStart}: {onGameStart: Function}) => {
 
     const handleStartClick = async () => {
         try {
-            const response = await onGameStart(selectedPattern);
-            const responseJSON = await response.json();
-            const newGrid = responseJSON.universe;
-            cy.log("New grid:", newGrid);
+            const responseData = await postStartNewGame(selectedPattern);
+            const newGrid = responseData.universe;
 
             // Assuming the newGrid is the data you need to update in the parent component
             onGameStart(newGrid);

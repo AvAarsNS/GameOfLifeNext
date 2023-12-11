@@ -7,7 +7,7 @@ const GameGrid = ({ grid }: { grid: number[][] }) => (
         <div
           key={`${rowIndex}-${colIndex}`}
           data-cy-gridcoordinate={`(${rowIndex},${colIndex})`}
-          className={`w-6 h-6 ${cell ? 'bg-black' : 'bg-gray-100'} border border-gray-400`}
+          className={`w-6 h-6 ${cell ? 'bg-black alive' : 'bg-gray-100 dead'} border border-gray-400`}
         />
       ))
     )}
