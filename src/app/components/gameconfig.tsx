@@ -39,7 +39,7 @@ const GameConfig = ({onGameStart}: {onGameStart: Function}) => {
                     <input 
                         type="radio" 
                         name="pattern" 
-                        value="Glider" 
+                        value="glider" 
                         data-cy-radiobutton-pattern="Glider" 
                         onChange={handlePatternChange} 
                     /> Glider
