@@ -32,9 +32,16 @@ Functionaliteit toevoegen waarmee na het klikken op de start knop het spel echt 
 
 ✅ SPIKE: how can we get the response universe in our grid?
   
-# Front end koppelen aan backend
+# Front end koppelen aan backend (start new game)
 
-🙌 - Echte backend koppelen aan de start new game functionaliteit en testen
+✅ - Echte backend koppelen aan de start new game functionaliteit en testen
+
+# Front end maken voor opvragen volgende tick
+
+✅ - test maken in cypress
+- Knopje erin joekelen
+- Verbinden met de backend
+
 
 # API connection with backend
 - Mock call to backend
