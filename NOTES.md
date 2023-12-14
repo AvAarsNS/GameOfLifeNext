@@ -54,6 +54,10 @@ I mean this test: - Test that the DOM contains the correct universe
 ✅ - Optimize component test for game grid. Currently takes > 1 minute
 ✅    -- Readability can be improved further. For the test case and the code of the component.
 
+# Make ReadyAPI test run from command line
+🙌 Use command C:\Users\johan.buis_nsp\AppData\Local\Programs\SmartBear\ReadyAPI-3.47.0\bin\testrunner.bat -sGameOfLife -r -a -f"C:\reports" "-RJUnit-Style HTML Report" -FXML "-EDefault environment" "C:\Kata\GameOfLife ReadyAPI"
+   Dit commando moet nog de parameters in voor het uitvoeren van de testrunner op ieders laptop. Command is te verkrijgen via ReadyAPI --> Rechtermuisknop op Test Suite --> Launch TestRunner --> Get Command Line
+
 # Investigate SuperTest
 https://www.npmjs.com/package/supertest
 
